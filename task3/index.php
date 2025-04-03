@@ -47,7 +47,7 @@ else {
         $errors[] = 'Укажите ФИО.';
     } elseif (!preg_match('/^[\p{Cyrillic}\s]+$/u', $formData['fio'])) {
         $errors[] = 'ФИО должно содержать только буквы и пробелы.';
-    } elseif (mb_strlen($formData['fio']) > 150) {
+    } elseif (strlen($formData['fio']) > 150) {
         $errors[] = 'ФИО не должно превышать 150 символов.';
     }
     
@@ -84,7 +84,7 @@ else {
     }
     
     // Биография: необязательное поле
-    if (!empty($formData['bio']) && mb_strlen($formData['bio']) > 5000) {
+    if (!empty($formData['bio']) && strlen($formData['bio']) > 5000) {
         $errors[] = 'Биография не должна превышать 5000 символов.';
     }
     
