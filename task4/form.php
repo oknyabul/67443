@@ -90,6 +90,7 @@
 
     .error {
         border: 2px solid red;
+        border-radius: 10px;
     }
 
     .error-message {
@@ -153,7 +154,7 @@
       <label>Любимый язык программирования*:</label>
       <select name="languages[]" multiple <?php if ($errors['languages']) echo 'class="error"'; ?>>
         <?php 
-        $selectedLangs = !empty($values['languages']) ? explode(',', $values['languages']) : [];
+        $selectedLangs = !empty($values['languages']) ? explode(',', $values['languages']) : array();
         $allLangs = [
           1 => 'Pascal', 2 => 'C', 3 => 'C++', 4 => 'JavaScript',
           5 => 'PHP', 6 => 'Python', 7 => 'Java', 8 => 'Haskell',
