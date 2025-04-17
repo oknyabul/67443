@@ -60,11 +60,18 @@ else {
         
         if ($field == 'languages') {
             // Особый случай для языков
-            if (empty($_POST['languages']) || !is_array($_POST['languages'])) {
+            $langs = $_POST['languages'] ?? array();
+            if (empty($langs)) {
                 setcookie('languages_error', '1', time() + 24 * 60 * 60);
                 $errors = TRUE;
             }
-            setcookie('languages_value', implode(',', $_POST['languages']), time() + 365 * 24 * 60 * 60);
+            // Проверяем, что $langs - массив и не пустой
+            if (is_array($langs)) {
+                setcookie('languages_value', implode(',', $langs), time() + 365 * 24 * 60 * 60);
+            } else {
+                setcookie('languages_error', '1', time() + 24 * 60 * 60);
+                $errors = TRUE;
+            }
         } elseif ($field == 'agree') {
             // Особый случай для чекбокса
             if (empty($_POST['agree'])) {
