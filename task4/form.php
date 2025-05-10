@@ -158,8 +158,7 @@
         <label>Любимый язык программирования* (выберите один или несколько):</label>
         <select name="languages[]" multiple="multiple" class="<?php if ($errors['languages']) echo 'error-field'; ?>" required>
             <?php
-            $selectedLangs = !empty($values['languages']) ? 
-                (is_array($values['languages']) ? $values['languages'] : unserialize($values['languages'])) : [];
+            $selectedLangs = !empty($_COOKIE['languages_value']) ? unserialize($_COOKIE['languages_value']) : [];
             ?>
             <option value="1" <?php if (in_array('1', $selectedLangs)) echo 'selected'; ?>>Pascal</option>
             <option value="2" <?php if (in_array('2', $selectedLangs)) echo 'selected'; ?>>C</option>
