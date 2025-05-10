@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Анкета разработчика</title>
   <style>
-    /* Стили как у вас */
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f5f7fa;

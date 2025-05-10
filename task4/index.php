@@ -63,7 +63,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   // bio
   $values['bio'] = $_COOKIE['bio_value'] ?? '';
 
-  // Подключаем форму
   include('form.php');
   exit();
 }
