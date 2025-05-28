@@ -923,7 +923,7 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
       <div class="my-2">
         <div>Биография</div>
         <label>
-          <textarea name="bio" class="input <?php echo ($errors['bio'] != NULL) ? 'red' : ''; ?>" placeholder="Биография"><?php echo $values['bio']; ?></textarea>
+          <textarea name="bio" placeholder="Биография"><?php echo $values['bio']; ?></textarea>
         </label>
       </div>
       
