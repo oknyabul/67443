@@ -1,0 +1,98 @@
+body {
+  height: 100%;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.red {
+    border: 1px solid red !important;
+}
+.form-buttons .button {
+    display: inline-block; /* Базовый стиль для всех кнопок */
+    margin: 5px;
+}
+
+/* Начальные состояния (дублируем PHP логику в CSS) */
+/* .form-buttons .submit-btn {
+    display: <?= $log ? 'none' : 'inline-block' ?>;
+}
+.form-buttons .edit-btn {
+    display: <?= $log ? 'inline-block' : 'none' ?>;
+}
+.form-buttons .logout-btn {
+    display: <?= $log ? 'inline-block' : 'none' ?>;
+}
+.form-buttons .login-btn {
+    display: <?= $log ? 'none' : 'inline-block' ?>;
+} */
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+[data-field] {
+    margin-top: 4px;
+}
+.form {
+  margin: 40px 0;
+  padding: 35px 70px;
+  border: 4px solid rgba(20, 173, 56, 0.674);
+}
+
+.head {
+  text-align: center;
+}
+
+.input {
+  height: 50px;
+  width: 400px;
+  margin: 6px 0;
+  border: 5px solid black;
+}
+
+.button {
+  width: 100%;
+  justify-content: center;
+  background-color: rgba(20, 173, 56, 0.674);
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid black;
+}
+
+select {
+  width: 100%;
+  outline: none;
+  border: 5px solid black;
+}
+
+.mess {
+  font-size: 21px;
+  color: green;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.mess_info {
+  color: rgb(255, 170, 0) !important;
+}
+
+.edbut {
+  background-color: rgb(255, 170, 0) !important;
+}
+
+.btnlike {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 3px;
+  text-align: center;
+  background-color: rgba(20, 173, 56, 0.674);
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid black;
+}
+
+.btnlike:hover {
+  text-decoration: none;
+  color: #fff;
+}
