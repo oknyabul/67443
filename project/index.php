@@ -292,7 +292,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     check_field('birth_date', $birth_date);
     check_field('gender', $gender);
     check_field('language', $language);
-    check_field('bio', $bio);
+    /*check_field('bio', $bio);*/
     check_field('agree', $agree);
 
     $languages = explode(',', $values['language']);
