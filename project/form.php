@@ -924,7 +924,6 @@ $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP
         <div>Биография</div>
         <label>
           <textarea name="bio" class="input <?php echo ($errors['bio'] != NULL) ? 'red' : ''; ?>" placeholder="Биография"><?php echo $values['bio']; ?></textarea>
-          <div class="error" data-field="bio"> <?php echo $messages['bio']?> </div>
         </label>
       </div>
       
