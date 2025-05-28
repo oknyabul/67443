@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (validate_field('fio', 'Это поле пустое', empty($fio))) {
     } else {
-        validate_field('fio', 'Неправильный формат: Имя Фамилия, только кириллица', !preg_match('/^([а-яё]+-?[а-яё]+)( [а-яё]+-?[а-яё]+){1,2}$/Diu', $fio));
+        validate_field('fio', 'Неправильный формат: Имя Фамилия, только кириллица', !preg_match('/^[а-яёА-ЯЁ]+(?:[- ][а-яёА-ЯЁ]+)*$/iu', $fio));
     }
 
     if (validate_field('phone', 'Это поле пустое', empty($phone))) {
@@ -104,10 +104,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     validate_field('language', 'Не выбран язык', empty($language));
 
-    if (validate_field('bio', 'Это поле пустое', empty($bio))) {
+   /* if (validate_field('bio', 'Это поле пустое', empty($bio))) {
     } else {
         validate_field('bio', 'Слишком длинная биография', strlen($bio) > 65535);
-    }
+    }*/
 
     validate_field('agree', 'Не ознакомлены с контрактом', empty($agree));
 
@@ -256,7 +256,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $birth_date = !empty($_COOKIE['birth_date_error']) ? $_COOKIE['birth_date_error'] : '';
     $gender = !empty($_COOKIE['gender_error']) ? $_COOKIE['gender_error'] : '';
     $language = !empty($_COOKIE['language_error']) ? $_COOKIE['language_error'] : '';
-    $bio = !empty($_COOKIE['bio_error']) ? $_COOKIE['bio_error'] : '';
     $agree = !empty($_COOKIE['agree_error']) ? $_COOKIE['agree_error'] : '';
 
     $errors = array();
